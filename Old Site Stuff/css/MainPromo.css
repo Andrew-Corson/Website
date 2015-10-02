@@ -1,0 +1,172 @@
+/***********************************
+Useful classes (when used, these are considered default 
+and other classes override them)
+***********************************/
+
+.bubble {
+	background-color: #435C96;
+	border: 3px solid white;
+	position: relative;
+	
+	border-radius: 100000000000px;
+	-moz-border-radius: 100000000000px;
+	-webkit-border-radius: 100000000000px;
+}
+
+/**********************************/
+
+* {
+	font-family: monospace;
+}
+
+body {
+	height: 100%;
+	
+	background: -webkit-linear-gradient(170deg, rgb(66, 128, 197), rgb(84, 216, 243)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(170deg, rgb(66, 128, 197), rgb(84, 216, 243)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(170deg, #2D70A7, #44aaff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(170deg, #2D70A7, #44aaff) /* Standard syntax */
+}
+
+.logo {
+	height: 100px;
+	margin-bottom: 40px;
+	background-color: #435C96;
+	border: 3px solid white;
+}
+
+.logo>* {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.beta {
+	background-color: #009933;
+	border: 7px solid #006800;
+	
+	text-align: left;
+}
+
+.beta:hover {
+	background-color: #19A347;
+	border: 7px solid #197719;
+}
+
+.beta:active {
+	border: 7px solid white;
+}
+
+.beta-link:link, .beta-link:visited {
+	color: black;
+}
+
+.logo, .beta {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.under-head {
+	background-color: black;
+	clear: left;
+	height: 1px;
+}
+
+/************************************
+End of heading style
+************************************/
+
+.question {
+	font-size: 15pt;
+	text-align: center;
+	margin-right: 0px;
+}
+
+.explain {
+	margin-left: 0px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	
+	font-size: 13pt;
+	letter-spacing: -.2px;
+	text-align: center;
+	/*line-height: 16px;*/
+}
+
+.explain>* {
+	margin: 5px;
+}
+
+.qaconnect {
+	margin-top: 40px;
+	border-color: white;
+}
+
+.qadown {
+	border-color: white;
+	left: 54px;
+	top: -54px;
+	position: relative;
+}
+
+.triconnect {
+	border-color: white;
+	top: -64px;
+	left: 80px;
+}
+
+.left-spear {
+	border-color: white;
+	left: -732px;
+    top: -52px;
+}
+
+.mid-spear {
+	border-color: white;
+	left: -370px;
+    top: -52px;
+}
+
+.right-spear {
+	border-color: white;
+	left: 24px;
+    top: -52px;
+}
+
+.individual, .physical, .market {
+	top: -62px;
+	background-color: white;
+	
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+
+.individual {
+	border-color: red;
+}
+
+.individual>h1 {
+	text-align: center;
+	color: red;
+	text-shadow: 3px 3px 5px grey;
+	font-size: 20pt;
+}
+
+.individual>ul {
+	font-size: 15pt;
+	margin-left: 20px;
+	list-style-image: url('../media/red fist.gif');
+}
+
+.physical {
+	border-color: yellow;
+}
+
+.market {
+	border-color: blue;
+}

@@ -1,0 +1,96 @@
+Read this before using or manipulating this code!
+
+I just wanted to quickly explain how to use the code for the main page
+scroller to make it easy and so you can reference this page.
+
+Changes to index.html
+	I linked the css file for the scroller to the page
+	I added script tags that reference the jQuery library
+	
+	Everything inside of the <div class="scroll-pane"></div> is new and needs
+	to replace the current code. This included:
+		The js script at the end that runs it.
+		Removing the container div. (We didn't need bootstrap for this as far as I know)
+		Adding the framework for the scroller.
+
+New Folder:
+	I made a folder named "js" for javascript files.
+	Right now it only has the scroller code and jQuery.
+	Make sure to reference that file with script tags if you want to use jquery on another page.
+	
+	I think we should make it a habit of creating a new js file for each portion of the site so we don't have to work on the same file at the same time(makes uploding it much harder because we have to merge code)
+	
+	Style note: make a comment naming the external files you use on any segments of the site to make it easier to find later when we have a lot
+	
+How To Use/Style the slider:
+	I made it so you never have to mess with the script to change the slider***
+	
+	General rule:
+		The number pane that is in the big view is hidden on the side view
+	
+	To make a new slider pane:
+		make a div and make the class "slider-view" and make the id "v1", "v2", etc. whatever order you want them in
+		
+		Adding an image is okay but any other visible element like text will need to be styled
+			go into ScrollerStyle.css and access .slider-view <tag name> {}
+	
+	To make a side pane
+		make a dive and make the class "side-view" and make the id "s1", "s2", etc. make sure the number corresponds to the slider-view that you want
+		
+		Adding an image is okay but any other visible element like text will need to be styled
+			go into ScrollerStyle.css and access .side-view <tag name> {}
+	
+	I know its annoying to make separate divs for the same news/announcement, but I did this so they would be able to be different ( most images get streched wierd in order to fit in the slider so you may want to crop it and add the new image into the slider div)
+	
+***If you want to change the speed of the animation, change the speed variable at the begining of the file("slow" is 600 miliseconds and "fast" is 200, you can also just enter the number you want)
+
+***You can also change the easing function for the animation(just look up the .animate() page for jquery). Just make sure the function is the same at the beginning and end or else the transition won't be seamless(will show the background)
+
+
+A quick breakdown of the slider framework (reference if needed)
+
+.scroll-pane: 650 height and is the grey rectangle that spans the screen
+.slider: the 1200 x 650 box that holds everything together
+#view-box: the 900 x 650 box that holds the large sliding elements
+#side-bar: the 300 x 650 box that holds the side divs
+.slider-view: the class used to make sure that every div with this name fits 
+	inside #view-box
+.side-view: the class used to make sure that every div with this name fits
+	inside #side-bar
+
+A quick rundown of the js (If your interested or are even worse at scripting than me)
+
+WARNING: DON'T MAKE THE ANIMATION SPEED LESS THAN THE INTERVAL BETWEEN SCROLLS
+
+The View class:
+	This class has the ability to detect how many divs are running through the slider and cylce through their identifying numbers.
+	
+	This was easier than tracking the current slide with an int and using % or something
+	
+	Fields:
+		num: the current number it is on
+		max: the total number of divs in the scroller
+		
+	Functions:
+		setNum(numb): sets the num field to parameter "numb"
+		getNext(): returns the number after num
+		getPrev(): returns the number before num
+		next(): actually changes num
+		
+		note: if num == max, then the "next" number is 1 and 
+			  if num == 1, then the "previous" number is max
+			  
+The view object: tracks the number of the div that is currently being featured
+speed: the number of miliseconds each transition takes***
+sideHeight: the height in pixels of a side pane
+
+The next two lines and the loops after that line up the divs to be scrolled through
+
+setInterval: calls the given function(scroll) every 5000 miliseconds(5 seconds)
+
+The scroll function(): scrolls all the divs using the jquery animate function
+	I'm not gonna actualy explain it you can figure it out yourself
+	
+	One note though is that the last argument of the animate method is a function that isn't called until the animation has finished.
+	
+	jQuery animations/functions run on a separate queue an therefor don't wait before calling methods after them.

@@ -1,0 +1,196 @@
+* {
+	padding: 0px;
+	margin: 10px;
+	border: 0px;
+		
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	display: block;
+	background-color: grey;
+}
+
+body {
+	width: 960px;
+	height: 100%;
+	margin: auto;
+	display: block;
+}
+
+.no-margin {
+	margin: 0px;
+}
+
+/*display types*/
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+}
+
+/*float types*/
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearl {
+	clear: left;
+}
+
+.clearr {
+	clear: right;
+}
+
+/*width and height*/
+.width_1 {
+	width: 60px;
+}
+
+.width_2 {
+	width: 140px;
+}
+
+.width_3 {
+	width: 220px;
+}
+
+.width_4 {
+	width: 300px;
+}
+
+.width_5 {
+	width: 380px;
+}
+
+.width_6 {
+	width: 460px;
+}
+
+.width_7 {
+	width: 540px;
+}
+
+.width_8 {
+	width: 620px;
+}
+
+.width_9 {
+	width: 700px;
+}
+
+.width_10 {
+	width: 780px;
+}
+
+.width_11 {
+	width: 860px;
+}
+
+.width_12 {
+	width: 940px;
+}
+
+.height_1 {
+	height: 60px;
+}
+
+.height_2 {
+	height: 140px;
+}
+
+.height_3 {
+	height: 220px;
+}
+
+.height_4 {
+	height: 300px;
+}
+
+.height_5 {
+	height: 380px;
+}
+
+.height_6 {
+	height: 460px;
+}
+
+.height_7 {
+	height: 540px;
+}
+
+.height_8 {
+	height: 620px;
+}
+
+.height_9 {
+	height: 700px;
+}
+
+.height_10 {
+	height: 780px;
+}
+
+.height_11 {
+	height: 860px;
+}
+
+.height_12 {
+	height: 940px;
+}
+
+/*connector lines
+
+default color: black
+default thickness: 2px;
+*/
+.horz_connect_1, .horz_connect_2, .horz_connect_3, .horz_connect_4, .horz_connect_5, 
+.horz_connect_5, .horz_connect_7, .horz_connect_8, .horz_connect_9, .horz_connect_10, 
+.horz_connect_11, .horz_connect_12 {
+	box-sizing: content-box;
+	height: 0px;
+	border: 1px solid black;
+	margin: 10px 0px;
+	position: relative;
+}
+
+.horz_connect_2 {
+	
+	width: 160px
+}
+
+.horz_connect_10 {
+	width: 800px;
+}
+
+.vert_connect_1, .vert_connect_2, .vert_connect_3, .vert_connect_4, .vert_connect_5, 
+.vert_connect_6, .vert_connect_7, .vert_connect_8, .vert_connect_9, .vert_connect_10, 
+.vert_connect_11, .vert_connect_12 {
+	box-sizing: content-box;
+	width: 0px;
+	border: 1px solid black;
+	margin: 0px 10px;
+	position: relative;
+}
+
+.vert_connect_1 {
+	
+	height: 80px;
+}
+
+.vert_connect_2 {
+	height: 160px
+}
+
+.vert_connect_3 {
+	height: 240px
+}
